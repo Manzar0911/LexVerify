@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   Royal Light Theme & Design System
+   AI-Powered Vendor Intelligence Workspace
+   ========================================================================== */
+
+:root {
+  /* Royal Palette Tokens */
+  --royal-navy-950: #090D16;
+  --royal-navy-900: #0F172A;
+  --royal-navy-800: #1E293B;
+  --royal-navy-700: #334155;
+  --royal-navy-600: #475569;
+  
+  --royal-blue-900: #1E3A8A;
+  --royal-blue-700: #1D4ED8;
+  --royal-blue-600: #2563EB;
+  --royal-blue-500: #3B82F6;
+  --royal-blue-100: #DBEAFE;
+  --royal-blue-50: #EFF6FF;
+
+  --royal-gold-700: #B45309;
+  --royal-gold-600: #D97706;
+  --royal-gold-500: #F59E0B;
+  --royal-gold-200: #FDE68A;
+  --royal-gold-100: #FEF3C7;
+  --royal-gold-50: #FFFBEB;
+
+  /* Surfaces & Backgrounds */
+  --bg-app: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-subtle: #F1F5F9;
+  --bg-surface-glass: rgba(255, 255, 255, 0.82);
+  --bg-overlay: rgba(15, 23, 42, 0.45);
+
+  /* Borders */
+  --border-subtle: #F1F5F9;
+  --border-default: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --border-royal: rgba(37, 99, 235, 0.22);
+  --border-gold: rgba(217, 119, 6, 0.3);
+
+  /* Text Colors */
+  --text-main: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
+  --text-inverse: #FFFFFF;
+  --text-royal: #1E40AF;
+  --text-gold: #B45309;
+
+  /* Semantic Status Colors */
+  --status-draft-bg: #F1F5F9;
+  --status-draft-text: #475569;
+  --status-draft-border: #CBD5E1;
+
+  --status-review-bg: #EFF6FF;
+  --status-review-text: #1D4ED8;
+  --status-review-border: #BFDBFE;
+
+  --status-action-bg: #FFFBEB;
+  --status-action-text: #B45309;
+  --status-action-border: #FDE68A;
+
+  --status-approved-bg: #F0FDF4;
+  --status-approved-text: #15803D;
+  --status-approved-border: #BBF7D0;
+
+  --status-rejected-bg: #FEF2F2;
+  --status-rejected-text: #B91C1C;
+  --status-rejected-border: #FECACA;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.09), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-royal: 0 12px 30px -8px rgba(37, 99, 235, 0.18);
+  --shadow-gold: 0 8px 25px -6px rgba(217, 119, 6, 0.2);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  opacity: 0.5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748B;
+}
+
+/* Glassmorphism & Royal Accents */
+.glass-panel {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-default);
+}
+
+/* Subtle Shimmer Animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
